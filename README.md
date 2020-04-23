@@ -47,7 +47,7 @@ Usamos el framework [Truffle](https://trufflesuite.com), que nos permite usar un
     yarn start
     ```
 
-Para usar los contratos desde el terminal:
+- Para usar los contratos desde el terminal:
 
   Luego de ejecutar `truffle migrate`
 
@@ -57,7 +57,7 @@ Para usar los contratos desde el terminal:
   truffle(develop)> helloWorld.setMessage('Goodbye')
   ```
 
-Para conectar el front-end a la testnet de RSK, en `/dapp/src/App.js`:
-- Cambiar `nodeEndpoint` por `https://public-node.testnet.rsk.co`
-- Cambiar `contractAddress` por `0xe1db8d54450c45e63f0e60a699cab992aaf8fac2`
-- Cambiar la red en la wallet por `RSK Testnet`
+- Para conectar el front-end a la testnet de RSK, en `/dapp/src/App.js`:
+  1. Cambiar `nodeEndpoint` por `https://public-node.testnet.rsk.co`
+  2. Cambiar `contractAddress` por `0xe1db8d54450c45e63f0e60a699cab992aaf8fac2`
+  3. Cambiar la red en la wallet por `RSK Testnet`
