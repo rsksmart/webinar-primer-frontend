@@ -16,38 +16,40 @@ Usamos el framework [Truffle](https://trufflesuite.com), que nos permite usar un
 
 ## Uso
 
-Instalar dependencias
-
-```
-npm i
-cd dapp
-yarn
-```
-
-Para usar el front end:
-
-1. Iniciar la blockchain local
+- Instalar dependencias
 
   ```
-  npx truffle develop
-  ```
-
-2. Crear los contratos en esa blockchain
-
-  ```
-  truffle(develop)> migrate
-  ```
-
-3. Copiar la dirección del contrato en `contractAddress` en `/dapp/src/App.js`
-
-4. En otra terminal, lanzar el aplicativo en `/dapp`
-
-  ```
+  npm i
   cd dapp
-  yarn start
+  yarn
   ```
 
-Para usar los contratos desde el terminal, luego de ejecutar `truffle migrate`
+- Para usar el front end:
+
+  1. Iniciar la blockchain local
+
+    ```
+    npx truffle develop
+    ```
+
+  2. Crear los contratos en esa blockchain
+
+    ```
+    truffle(develop)> migrate
+    ```
+
+  3. Copiar la dirección del contrato en `contractAddress` en `/dapp/src/App.js`
+
+  4. En otra terminal, lanzar el aplicativo en `/dapp`
+
+    ```
+    cd dapp
+    yarn start
+    ```
+
+Para usar los contratos desde el terminal:
+
+  Luego de ejecutar `truffle migrate`
 
   ```
   truffle(develop)> let helloWorld = await HelloWorld.deployed()
@@ -55,5 +57,7 @@ Para usar los contratos desde el terminal, luego de ejecutar `truffle migrate`
   truffle(develop)> helloWorld.setMessage('Goodbye')
   ```
 
-Para usar en la testnet:
-- Cambiar 
+Para conectar el front-end a la testnet de RSK, en `/dapp/src/App.js`:
+- Cambiar `nodeEndpoint` por `https://public-node.testnet.rsk.co`
+- Cambiar `contractAddress` por `0xe1db8d54450c45e63f0e60a699cab992aaf8fac2`
+- Cambiar la red en la wallet por `RSK Testnet`
