@@ -10,6 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "create-react-app": "^3.4.1",
-    "truffle": "^5.1.22"
+    "truffle": "^5.7.9"
   }
 }
